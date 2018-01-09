@@ -20,7 +20,7 @@ Route::get('/', function () {
 });
 
 Route::get('/sethook', function () {
-  $response = Telegram::setWebhook(['url' => env('TELEGRAM_BOT_URL')]);
+  $response = Telegram::setWebhook(['url' => 'https://neutele.herokuapp.com/<token>/webhook']);
   return $response;
 });
 
