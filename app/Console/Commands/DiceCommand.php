@@ -13,7 +13,7 @@ class DiceCommand extends Command
     public function handle($arguments)
     {
         $num = rand(1, 100);
-        $this->replyWithMessage(['text' => $num]);
         $this->replyWithChatAction(['action' => Actions::TYPING]);
+        $this->replyWithMessage(['text' => $num]);
     }
 }
